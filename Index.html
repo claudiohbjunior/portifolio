@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-3Soe+RsA/2ia/G4C6Ff9l8/G+UZPCLEpvzeWPeTbV4wgtK8BYIiy3Smc4m8n0pUL38wBBaX94w/ST/Y6FsdDQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/433b841a08.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script src="menu.js"></script>
+  
+    <style>
+
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(55, 104, 119);
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+            padding: 10px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #ffd700;
+            color: #333;
+            padding: 10px;
+            text-align: center;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            /* ... outros estilos ... */
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s, visibility 0.3s;
+        }
+
+        /* Adicione esta regra para aumentar o tamanho dos ícones */
+        .contact-icons {
+            font-size: 48px; /* Ajuste o tamanho conforme necessário */
+        }
+
+        @property --rotate {
+            syntax: "<angle>";
+            initial-value: 132deg;
+            inherits: false;
+        }
+
+        :root {
+            --card-height: 55vh;
+            --card-width: calc(var(--card-height) / 1.4);
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+
+        @keyframes spin {
+            0% {
+                --rotate: 0deg;
+            }
+            100% {
+                --rotate: 360deg;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+  <nav class="nav-container">
+        <li class="nav-item"><a href="Index.html">Início</a></li>
+        <li class="nav-item">
+            <a href="#">Contato</a>
+            <ul class="submenu">
+                <li><a href="https://wa.me/88994077390" target="_blank">WhatsApp</a></li>
+                <li><a href="https://www.linkedin.com/in/claudiohbjunior" target="_blank">LinkedIn</a></li>
+            </ul>
+        </li>
+        <li class="nav-item"><a href="#" data-toggle="modal" data-target="#videoModal10">Me conheça</a></li>
+    </nav>
+
+    <div class="modal" id="videoModal10" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="videoModalLabel">Vídeo do YouTube</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- Adicione a URL do seu vídeo aqui -->
+                    <iframe class="youtube-video10" width="465" height="315" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <footer id="footer">
+        <h2>Entre em Contato</h2>
+        <h2>Estou ansioso por sua mensagem! </h2>
+
+        <!-- Ícones de contato usando FontAwesome -->
+        <div class="contact-icons">
+            <a href="https://api.whatsapp.com/send?phone=88994077390" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.linkedin.com/in/claudiohbjunior" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:claudiohbjunior@gmail.com" title="Email"><i class="far fa-envelope"></i></a>
+        </div>
+    </footer>
+
+    <div class="grid-container">
+        <!-- Conteúdo dos cards (se necessário) -->
+    </div>
+
+
+
+    <!-- INICIO DO MODAL 1 -->
+    <div class="modal" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="videoModalLabel">Vídeo do YouTube</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Adicionamos uma classe ao iframe para referenciá-lo facilmente -->
+          <iframe class="youtube-video" width="465" height="315" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INICIO DO STYLE 1  -->
+    <div class="cards">
+
+<div class="card">
+<div class="card__image-holder">
+<img class="card__image" src="./img/Vendas.jpg" alt="wave" width="240" height="210" />
+</div>
+<div class="card-title">
+<a href="#" class="toggle-info btn" id="openModal">
+<span class="left"></span>
+<span class="right"></span>
+</a>
+<h2>
+Dashborad de vendas
+</h2>
+</div>
+<div class="card-flap flap1">
+<div class="card-description">
+Dashboard com informações em tempo real, destaque para grafico de barras para acompanhamento
+de total vendido, metas e tendência.
+</div>
+<div class="card-flap flap2">
+<div class="card-actions">
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#videoModal">
+    Assistir explicação
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- FIM DO STYLE 1  -->
+  <!-- FIM DO MODAL 1  -->
+
+  <!-- INICIO DO MODAL 2  -->
+  <div class="modal" id="videoModal2" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="videoModalLabel">Vídeo do YouTube</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Adicionamos uma classe ao iframe para referenciá-lo facilmente -->
+          <iframe class="youtube-video2" width="465" height="315" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- INICIO DO STYLE 2 -->
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <!-- Embed do vídeo do YouTube -->
+    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/SEt5MR_J-nw" frameborder="0" allowfullscreen></iframe>
+    <span class="close" id="closeModal">&times;</span>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+<div class="card">
+  <div class="card__image-holder">
+    <img class="card__image" src="./img/Posto.jpg" width="245" height="225" />
+  </div>
+  <div class="card-title">
+    <a href="#" class="toggle-info btn">
+      <span class="left"></span>
+      <span class="right"></span>
+    </a>
+    <h2>
+        Dashboard postos 
+    </h2>
+  </div>
+  <div class="card-flap flap1">
+    <div class="card-description">
+      Dashboard com informações em tempo real, destaque para grafico de rosca indicando 
+      faturamento, custo, quantidade vendida e lucro
+    </div>
+    <div class="card-flap flap2">
+      <div class="card-actions">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#videoModal2">
+            Assistir explicação
+  </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- FIM DO MODAL 2 -->
+  <!-- FIM DO MODAL 2  -->
+
+  <!-- INICIO DO MODAL 3  -->
+  <div class="modal" id="videoModal3" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="videoModalLabel">Vídeo do YouTube</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Adicionamos uma classe ao iframe para referenciá-lo facilmente -->
+          <iframe class="youtube-video3" width="465" height="315" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- INICIO DO STYLE 3 -->
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <!-- Embed do vídeo do YouTube -->
+    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/SEt5MR_J-nw" frameborder="0" allowfullscreen></iframe>
+    <span class="close" id="closeModal">&times;</span>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+<div class="card">
+  <div class="card__image-holder">
+    <img class="card__image" src="./img/Transporte.jpg" width="245" height="225" />
+  </div>
+  <div class="card-title">
+    <a href="#" class="toggle-info btn">
+      <span class="left"></span>
+      <span class="right"></span>
+    </a>
+    <h2>
+        Dashboard transporte
+    </h2>
+  </div>
+  <div class="card-flap flap1">
+    <div class="card-description">
+      Dashboard com informações em tempo real, destaque para o comparativo entre quantidade vendida e custo por motorista e caminhão.    </div>
+    <div class="card-flap flap2">
+      <div class="card-actions">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#videoModal3">
+            Assistir explicação
+  </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- FIM Modal 3 -->
+<!-- FIM DO STYLE 3 -->
+
+<!-- INICIO DO MODAL 4  -->
+  <div class="modal" id="videoModal4" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="videoModalLabel">Vídeo do YouTube</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Adicionamos uma classe ao iframe para referenciá-lo facilmente -->
+          <iframe class="youtube-video4" width="465" height="315" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- INICIO DO STYLE 4 -->
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <!-- Embed do vídeo do YouTube -->
+    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/SEt5MR_J-nw" frameborder="0" allowfullscreen></iframe>
+    <span class="close" id="closeModal">&times;</span>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+<div class="card">
+  <div class="card__image-holder">
+    <img class="card__image" src="./img/Cobrancas.jpg" width="245" height="240" />
+  </div>
+  <div class="card-title">
+    <a href="#" class="toggle-info btn">
+      <span class="left"></span>
+      <span class="right"></span>
+    </a>
+    <h2>
+        Dashboard cobranças
+    </h2>
+  </div>
+  <div class="card-flap flap1">
+    <div class="card-description">
+      Dashboard com informações em tempo real, destaque controle significativo de vales de clientes.
+    </div>
+    <div class="card-flap flap2">
+      <div class="card-actions">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#videoModal4">
+            Assistir explicação
+  </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- FIM Modal 4 -->
+<!-- FIM DO STYLE 4 -->
+
+
+
+<!-- INICIO DO MODAL 5  -->
+  <div class="modal" id="videoModal5" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="videoModalLabel">Vídeo do YouTube</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Adicionamos uma classe ao iframe para referenciá-lo facilmente -->
+          <iframe class="youtube-video5" width="465" height="315" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- INICIO DO STYLE 5 -->
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <!-- Embed do vídeo do YouTube -->
+    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/SEt5MR_J-nw" frameborder="0" allowfullscreen></iframe>
+    <span class="close" id="closeModal">&times;</span>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+<div class="card">
+  <div class="card__image-holder">
+    <img class="card__image" src="./img/Estoque.jpg" width="245" height="225" />
+  </div>
+  <div class="card-title">
+    <a href="#" class="toggle-info btn">
+      <span class="left"></span>
+      <span class="right"></span>
+    </a>
+    <h2>
+        Dashboard Estoque
+    </h2>
+  </div>
+  <div class="card-flap flap1">
+    <div class="card-description">
+      Dashboard com informações em tempo real, destaque para indicadores que mostram se tem o produto em outra loja ou está zerado total.
+    </div>
+    <div class="card-flap flap2">
+      <div class="card-actions">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#videoModal5">
+            Assistir explicação
+  </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- FIM Modal 5 -->
+<!-- FIM DO STYLE 5 -->
+
+
+<!-- INICIO DO MODAL 6  -->
+  <div class="modal" id="videoModal6" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="videoModalLabel">Vídeo do YouTube</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Adicionamos uma classe ao iframe para referenciá-lo facilmente -->
+          <iframe class="youtube-video6" width="465" height="315" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- INICIO DO STYLE 6-->
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <!-- Embed do vídeo do YouTube -->
+    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/SEt5MR_J-nw" frameborder="0" allowfullscreen></iframe>
+    <span class="close" id="closeModal">&times;</span>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+<div class="card">
+  <div class="card__image-holder">
+    <img class="card__image" src="./img/Clientes.jpg" width="245" height="210" />
+  </div>
+  <div class="card-title">
+    <a href="#" class="toggle-info btn">
+      <span class="left"></span>
+      <span class="right"></span>
+    </a>
+    <h2>
+        Dashboard Clientes
+    </h2>
+  </div>
+  <div class="card-flap flap1">
+    <div class="card-description">
+      Dashboard com informações em tempo real, destaque para indicadores que comparam quantidade de novos e antigos clientes e também traz os ranking dos clientes que mais lucram.
+    </div>
+    <div class="card-flap flap2">
+      <div class="card-actions">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#videoModal6">
+            Assistir explicação
+  </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- FIM Modal 6 -->
+<!-- FIM DO STYLE 6 -->
+
+<!-- INICIO DO MODAL 7  -->
+  <div class="modal" id="videoModal7" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="videoModalLabel">Vídeo do YouTube</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Adicionamos uma classe ao iframe para referenciá-lo facilmente -->
+          <iframe class="youtube-video7" width="465" height="315" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- INICIO DO STYLE 6 -->
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <!-- Embed do vídeo do YouTube -->
+    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/SEt5MR_J-nw" frameborder="0" allowfullscreen></iframe>
+    <span class="close" id="closeModal">&times;</span>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+<div class="card">
+  <div class="card__image-holder">
+    <img class="card__image" src="./img/Recorrencia.jpg" width="245" height="225" />
+  </div>
+  <div class="card-title">
+    <a href="#" class="toggle-info btn">
+      <span class="left"></span>
+      <span class="right"></span>
+    </a>
+    <h2>
+        Dashboard de Recorrência
+    </h2>
+  </div>
+  <div class="card-flap flap1">
+    <div class="card-description">
+      Dashboard com informações em tempo real, destaque para indicadores semanais que indicam se o cliente vem comprando mais ou menos comparando com o periodo anterior.
+    </div>
+    <div class="card-flap flap2">
+      <div class="card-actions">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#videoModal7">
+            Assistir explicação
+  </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- FIM Modal 6 -->
+<!-- FIM DO STYLE 6 -->
+
+<!-- INICIO DO MODAL 8  -->
+  <div class="modal" id="videoModal8" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="videoModalLabel">Vídeo do YouTube</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Adicionamos uma classe ao iframe para referenciá-lo facilmente -->
+          <iframe class="youtube-video8" width="465" height="315" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- INICIO DO STYLE 8 -->
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <!-- Embed do vídeo do YouTube -->
+    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/SEt5MR_J-nw" frameborder="0" allowfullscreen></iframe>
+    <span class="close" id="closeModal">&times;</span>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+<div class="card">
+  <div class="card__image-holder">
+    <img class="card__image" src="./img/Precos.jpg" width="245" height="240" alt="beach" />
+  </div>
+  <div class="card-title">
+    <a href="#" class="toggle-info btn">
+      <span class="left"></span>
+      <span class="right"></span>
+    </a>
+    <h2>
+        Dashboard de preços
+    </h2>
+  </div>
+  <div class="card-flap flap1">
+    <div class="card-description">
+      Dashboard com informações em tempo real, destaque para o filtro que podemos buscar por preços e por clientes
+    </div>
+    <div class="card-flap flap2">
+      <div class="card-actions">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#videoModal8">
+            Assistir explicação
+  </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- FIM Modal 8 -->
+<!-- FIM DO STYLE 8 -->
+
+<!-- INICIO DO MODAL 9  -->
+  <div class="modal" id="videoModal9" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="videoModalLabel">Vídeo do YouTube</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Adicionamos uma classe ao iframe para referenciá-lo facilmente -->
+          <iframe class="youtube-video9" width="465" height="315" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- INICIO DO STYLE 9 -->
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <!-- Embed do vídeo do YouTube -->
+    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/SEt5MR_J-nw" frameborder="0" allowfullscreen></iframe>
+    <span class="close" id="closeModal">&times;</span>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+<div class="card">
+  <div class="card__image-holder">
+    <img class="card__image" src="./img/Produtos.jpg" width="245" height="240" />
+  </div>
+  <div class="card-title">
+    <a href="#" class="toggle-info btn">
+      <span class="left"></span>
+      <span class="right"></span>
+    </a>
+    <h2>
+        Dashboard produtos
+    </h2>
+  </div>
+  <div class="card-flap flap1">
+    <div class="card-description">
+      Dashboard com informações em tempo real, destaque para o lucro e ranking dos produtos que mais dão lucro.
+    </div>
+    <div class="card-flap flap2">
+      <div class="card-actions">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#videoModal9">
+            Assistir explicação
+  </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- FIM Modal 9 -->
+<!-- FIM DO STYLE 9 -->
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+
+<style>
+    
+    </style>
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var footer = document.querySelector("footer");
+            var body = document.body;
+
+            function showFooter() {
+                var windowHeight = window.innerHeight;
+                var bodyHeight = body.offsetHeight;
+                var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+                if (windowHeight + scrollTop >= bodyHeight) {
+                    footer.style.opacity = "1";
+                    footer.style.visibility = "visible";
+                } else {
+                    footer.style.opacity = "0";
+                    footer.style.visibility = "hidden";
+                }
+            }
+
+            window.addEventListener("scroll", showFooter);
+            window.addEventListener("resize", showFooter);
+        });
+    </script>
+
+    
+    
+
+</body>
+
+</html>
